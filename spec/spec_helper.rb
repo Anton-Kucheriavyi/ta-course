@@ -1,6 +1,9 @@
 require 'selenium-webdriver'
 require 'capybara/rspec'
 require 'faker'
+require 'site_prism'
+
+require_relative '../page_objects/pages/login_page'
 
 RSpec.configure do |config|
   def options

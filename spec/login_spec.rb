@@ -1,10 +1,11 @@
 feature 'User login', js: true do
   scenario 'User can login to the system' do
-    visit('https://gitlab.testautomate.me/')
+    @login_page = LoginPage.new
+    @login_page.load
 
-    find('#user_login').set 'uitestuser'
-    find('#user_password').set 'testpassword123'
-    find('.js-sign-in-button').click
+    @login_page.login_field.set 'uitestuser'
+    @login_page.password_field.set 'testpassword123'
+    @login_page.submit_button.click
 
     expect(page).to have_content 'Welcome to GitLab'
   end

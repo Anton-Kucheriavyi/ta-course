@@ -28,6 +28,7 @@ GEM
     rack-test (2.0.2)
       rack (>= 1.3)
     regexp_parser (2.7.0)
+    require_all (3.0.0)
     rexml (3.2.5)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
@@ -62,6 +63,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   faker
+  require_all
   rspec
   selenium-webdriver
   site_prism

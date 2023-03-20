@@ -8,5 +8,10 @@ feature 'User login', js: true do
     @login_page.submit_button.click
 
     expect(page).to have_content 'Welcome to GitLab'
+
+    @home_page = HomePage.new
+    @home_page.menu.user_picture.click
+
+    expect(@home_page.menu.user_name).to have_content 'uitestuser'
   end
 end

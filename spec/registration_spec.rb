@@ -13,8 +13,8 @@ feature 'User registration', js: true do
     @register_page.password.set 'test123456!'
     @register_page.registration_button.click
 
-    @register_page.roles.first.select('Software Developer')
-    @register_page.objectives.first.select("A different reason")
+    @register_page.role.select('Software Developer')
+    @register_page.objective.select("A different reason")
 
     @register_page.wait_until_other_objective_visible(wait: 1)
 

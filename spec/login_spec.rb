@@ -1,12 +1,6 @@
 feature 'User login', js: true do
   scenario 'User can login to the system' do
-    @login_page = LoginPage.new
-    @login_page.load
-
-    @login_page.login_field.set 'uitestuser'
-    @login_page.password_field.set 'testpassword123'
-    @login_page.submit_button.click
-
+    login_user ENV['USERNAME'], ENV['PASSWORD']
     expect(page).to have_content 'Welcome to GitLab'
 
     @home_page = HomePage.new

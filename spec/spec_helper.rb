@@ -1,11 +1,15 @@
-require 'selenium-webdriver'
 require 'capybara/rspec'
-require 'faker'
+require 'dotenv/load'
+require 'ffaker'
+require 'selenium-webdriver'
 require 'site_prism'
 require 'require_all'
 
 require_all 'page_objects/sections'
 require_all 'page_objects/pages'
+require_all 'modules'
+
+include Helpers
 
 RSpec.configure do |config|
   def options

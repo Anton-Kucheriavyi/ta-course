@@ -1,0 +1,13 @@
+Metrics/AbcSize:
+  Exclude:
+    - 'modules/helpers/helpers.rb'
+Style/Documentation:
+  Exclude:
+    - 'page_objects/**/*'
+Style/MixinUsage:
+  Exclude:
+    - 'spec/spec_helper.rb'
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Max: 20

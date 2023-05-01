@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RegistrationPage < SitePrism::Page
   set_url 'https://gitlab.testautomate.me/users/sign_up'
 

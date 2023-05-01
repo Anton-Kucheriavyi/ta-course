@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'ffaker'
 
+# This class describes User model
 class User
   attr_reader :username, :password, :firstname, :lastname, :email
 

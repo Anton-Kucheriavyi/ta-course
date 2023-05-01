@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 feature 'User registration', js: true do
   scenario 'User can register to the system' do
     user = User.new

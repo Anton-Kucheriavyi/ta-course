@@ -6,12 +6,14 @@ require 'ffaker'
 require 'selenium-webdriver'
 require 'site_prism'
 require 'require_all'
+require 'rest-client'
 
 require_all 'page_objects/sections'
 require_all 'page_objects/pages'
 require_all 'modules'
 
 include Helpers
+include ApiWrappers
 
 RSpec.configure do |_config|
   def chrome_options

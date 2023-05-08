@@ -22,10 +22,11 @@ module Helpers
     expect(page).to have_selector('.validation-success.field-validation')
 
     @register_page.email.set user.email
-    @register_page.password.set 'test123456!'
+    @register_page.password.set user.password
     @register_page.registration_button.click
 
     @register_page.role.select('Software Developer')
     @register_page.objective.select('A different reason')
+    @register_page.finish_registration_button.click
   end
 end
